@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood selector</title>
+
+  <style>
+    body {
+      background-color: white;
+      text-align: center;
+      font-family: Arial;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    #happyBtn { background-color: yellow; color: black; }
+    #sadBtn { background-color: blue; }
+    #angryBtn { background-color: red; }
+    #relaxedBtn { background-color: green; }
+  </style>
+</head>
+
+<body id="body">
+
+  <h1>Choose your mood</h1>
+  <p id="message"></p>
+
+  <button id="happyBtn">Happy</button>
+  <button id="sadBtn">Sad</button>
+  <button id="angryBtn">Angry</button>
+  <button id="relaxedBtn">Relaxed</button>
+
+  <script>
+    let body = document.getElementById("body");
+    let message = document.getElementById("message");
+
+    document.getElementById("happyBtn").addEventListener("click", function () {
+      body.style.backgroundColor = "yellow";
+      message.innerHTML = "Yay! Keep smiling 😊";
+    });
+
+    document.getElementById("sadBtn").addEventListener("click", function () {
+      body.style.backgroundColor = "blue";
+      message.innerHTML = "It's okay to feel sad sometimes.., come back soon 😢";
+    });
+
+    document.getElementById("angryBtn").addEventListener("click", function () {
+      body.style.backgroundColor = "red";
+      message.innerHTML = "Calm down, don't be angry 😡";
+    });
+
+    document.getElementById("relaxedBtn").addEventListener("click", function () {
+      body.style.backgroundColor = "green";
+      message.innerHTML = "Stay calm and relaxed 🧘‍♀️";
+    });
+  </script>
+
+</body>
+</html>
